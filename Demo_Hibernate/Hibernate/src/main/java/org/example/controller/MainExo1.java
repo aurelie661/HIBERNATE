@@ -45,7 +45,17 @@ public class MainExo1 {
         produit3.setReference("12346azerty");
         produit3.setPrix(15.20);
         produit3.setStock(15);
-        produit3.setDateAchat(new Date("2023/08/29"));
+        produit3.setDateAchat(new Date("2023/08/15"));
+        session.update(produit3);
+        session.getTransaction().commit();
+
+        session.getTransaction().begin();
+        Produit produit4 = session.get(Produit.class, 1L);
+        produit3.setMarque("Croustibat");
+        produit3.setReference("12346azerty");
+        produit3.setPrix(102);
+        produit3.setStock(15);
+        produit3.setDateAchat(new Date("2023/08/15"));
         session.update(produit3);
         session.getTransaction().commit();
 
