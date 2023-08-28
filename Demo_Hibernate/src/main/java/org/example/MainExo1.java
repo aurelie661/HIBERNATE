@@ -9,7 +9,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.Date;
 
-public class Main {
+public class MainExo1 {
     public static void main(String[] args) {
         StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure().build();
         SessionFactory sf = new MetadataSources(ssr).buildMetadata().buildSessionFactory();
